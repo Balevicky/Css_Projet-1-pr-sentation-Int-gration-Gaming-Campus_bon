@@ -1,0 +1,769 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url(./assets/fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+/* ============== THE MAIN COLORS=================== */
+:root {
+    --color1: black;
+    --color2: white;
+    --color3: purple;
+    --color4: rgb(105, 105, 243);
+
+}
+
+/* ============ APPLY IN ALL THE BODY ================== */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: Montserrat, sans-serif;
+    text-align: center;
+    margin: 0 auto;
+}
+
+button {
+    border: 1px solid var(--color2);
+    background: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.5s ease;
+    color: var(--color2);
+}
+
+button:hover {
+    background: var(--color2);
+
+    color: var(--color1);
+}
+
+/* ======================= APPLY TO NAV BAR============ */
+nav {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 5px;
+}
+
+nav li {
+    font-weight: 700;
+    text-transform: uppercase;
+    /* font-size: 0.8rem; */
+    font-size: 0.8rem;
+    position: relative;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+nav li:first-child {
+    color: var(--color3);
+
+}
+
+nav li:hover {
+    cursor: pointer;
+    color: var(--color4);
+}
+
+nav li:hover:last-child {
+    color: var(--color1);
+}
+
+nav li:first-child:before {
+    content: "";
+    background: var(--color3);
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    transform: translateY(-10px);
+}
+
+nav li:hover:before {
+    content: "";
+    background: var(--color4);
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    transform: translateY(-10px);
+}
+
+nav li:last-child:before {
+    background: none;
+}
+
+#language {
+    border: 1px solid transparent;
+    background: rgba(219, 217, 217, 0.986);
+    border-radius: 5px;
+    width: 4rem;
+    height: 0px;
+    text-align: center;
+    transition: 0.9s;
+    text-align: center;
+    /* for center the text vertically */
+    line-height: 0px;
+    transition: 0.5s ease;
+}
+
+#language:hover {
+    color: var(--color2);
+    background: var(--color1);
+}
+
+/* ======================== header part================ */
+
+.main-header {
+    background: url(./assets/img/bg.jpg) fixed center/cover;
+    padding: 50px;
+}
+
+.main-header h1 {
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 20px 0 30px;
+    color: var(--color2);
+}
+
+.main-header button {
+    padding: 15px 35px;
+    color: var(--color2);
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.main-header button:hover {
+    color: var(--color1);
+}
+
+.main-header i {
+    transform: translateX(10px);
+}
+
+.header-text {
+    max-width: 1100px;
+    padding: 50px 0;
+    margin: 0 auto;
+    line-height: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* ================================= ICON PART=============== */
+.icon-part {
+    background: var(--color1);
+    color: var(--color2);
+    padding: 60px 0;
+
+}
+
+.icon-part-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    justify-items: center;
+    max-width: 1100px;
+}
+
+.lip-logo {
+    margin-bottom: 30px;
+}
+
+.icon-part-container h3 {
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 15px 0;
+    /* font-size: 0.9rem; */
+}
+
+.icon-part-container p {
+    padding: 20px 0;
+    /* font-size: 1.1rem; */
+    width: 95%;
+    margin: 0 auto;
+    line-height: 25px;
+}
+
+.icon-part-container button {
+    padding: 10px 20px;
+    /* font-size: 1.1rem; */
+}
+
+/* ====================== HEADER TEXT PART ================ */
+.news-part {
+    background: rgba(252, 250, 250, 0.815);
+}
+
+.header-news {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    justify-content: center;
+    align-items: center;
+    max-width: 1100px;
+    padding: 60px 0 40px;
+    margin: 0 auto;
+}
+
+.left-part h2 {
+    text-transform: uppercase;
+    font-weight: 500;
+    text-align: left;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.left-part p {
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+.right-part button {
+    padding: 15px 20px;
+    color: var(--color1);
+    border: 1px solid var(--color1);
+    letter-spacing: 2px;
+}
+
+.right-part button:hover {
+    background: var(--color1);
+    color: var(--color2);
+}
+
+.right-part button i {
+    transform: translateX(10px);
+}
+
+.main-news {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.main-news-container {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.main-news-container>div {
+    width: 26%;
+    position: relative;
+}
+
+.mn-pic img {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 3px;
+    box-shadow: 0px 2px 9px 0px #88888861;
+}
+
+.main-news-container h4 {
+    line-height: 25px;
+    text-align: left;
+    font-weight: 600;
+    margin: 15px 0;
+}
+
+.main-news-container p {
+    text-align: left;
+    line-height: 25px;
+    padding-bottom: 50px;
+}
+
+.link {
+    text-align: left;
+    position: absolute;
+    bottom: 0;
+}
+
+.link a {
+    color: var(--color3);
+    text-transform: ;
+
+}
+
+.link a:hover {
+    color: olive;
+}
+
+/* ================ PART OF CONTACT ============== */
+.contact {
+    padding: 60px 0 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+
+}
+
+.contact-list {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    gap: 30px;
+}
+
+.contact-list::after {
+    content: "";
+    width: 90%;
+    height: 2px;
+    background: rgb(221, 220, 220);
+    position: absolute;
+    bottom: -30px;
+    ;
+}
+
+.contact-list .list {
+    text-align: left;
+    width: 25%;
+
+}
+
+#contact-img img {
+
+    display: block;
+    margin: 0 auto;
+
+}
+
+.contact-list .list h5 {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+
+}
+
+.contact-list .infos-p li {
+    line-height: 30px;
+    font-size: 0.9rem;
+}
+
+.contact-list .list p {
+    line-height: 20px;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.contact-list .list a {
+    color: var(--color3);
+    font-size: 0.9rem;
+}
+
+.contact-list .list a:hover {
+    color: olive;
+    font-size: 0.9rem;
+}
+
+.contact-list .list h6 {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.network {
+    padding-top: 20px;
+}
+
+.footer-logos i {
+    margin: 0 12px 30px 0;
+    font-size: 0.9rem;
+}
+
+.copyright {
+    margin: 0;
+}
+
+.contact-medias {
+    padding: 60px 0 20px;
+    display: flex;
+    align-items: left;
+    width: 95%;
+    margin: 0 audio;
+}
+
+.medias-text {
+    text-align: left;
+    width: 30%;
+}
+
+.medias-text h3 {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+
+}
+
+.medias-text p {
+    text-align: left;
+    font-weight: 600;
+}
+
+.medias-logos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+}
+
+.medias-logos img {
+    width: 60px;
+}
+
+/* ===================== FOOTER ============= */
+footer {
+    background: var(--color1);
+    padding: 50px 0;
+    color: var(--color2);
+}
+
+footer h3 {
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* ========================== MEDIA QUERIES ============= */
+/* ========== max-width= 1131px ============== */
+@media screen and (max-width:1131px) {
+
+
+    /* =========NAV BAR========= */
+    nav li {
+        font-size: 1.1vw;
+    }
+
+    #language {
+        width: 3rem;
+        /* for center the text vertically */
+        line-height: 0px;
+    }
+
+    /* ========== header-text============ */
+    .header-text {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    /* ============== ICON PART=============== */
+    .icon-part-container {
+        align-items: left;
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 0 15px 0 0;
+    }
+
+    .icon-part-container h3 {
+
+        font-weight: 600;
+        /* text-align: left; */
+        font-size: 0.8rem;
+    }
+
+    .lip-logo {
+        width: 20%;
+
+    }
+
+    /* ============== ICON PART=============== */
+    .icon-part-container {
+        align-items: left;
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 0 15px 0 0;
+    }
+
+    .icon-part-container h3 {
+
+        font-weight: 600;
+        font-size: 0.8rem;
+    }
+
+    .lip-logo {
+        width: 20%;
+    }
+
+    .lip-logo img {
+        width: 250px;
+    }
+
+    .icon-part-container p {
+        padding: 5px 0;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+
+    .icon-part-container p {
+        padding: 5px 0;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    /* ============ HEADER TEXT PART ============= */
+    .header-news {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .main-news-container {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    /* ========== PART OF CONTACT ============== */
+    .contact {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .contact-list {
+        gap: 10px;
+
+    }
+
+    .contact-list .list {
+        width: 20%;
+
+    }
+
+    .contact-list .list h6 {
+        font-size: 0.7rem;
+
+    }
+
+    .medias-logos img {
+        width: 50px;
+    }
+
+    /* ============= FOOTER ============= */
+    footer ul {
+
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    footer ul img {
+
+        width: 50px;
+    }
+}
+
+/* ========== max-width= 1131px ============== */
+@media screen and (max-width:760px) {
+
+    /* ============== ICON PART=============== */
+
+    .icon-part-container h3 {
+
+        font-weight: 600;
+        font-size: 0.7rem;
+    }
+
+    .lip-logo img {
+        width: 230px;
+
+    }
+
+    .icon-part-container p {
+        font-size: 1rem;
+
+    }
+}
+
+/* ========== max-width= 1131px ============== */
+@media screen and (max-width:725px) {
+
+
+    /* =========NAV BAR========= */
+    nav li {
+        font-size: 1.3vw;
+    }
+
+    #language {
+        width: 2rem;
+        /* width: 4vw; */
+        /* for center the text vertically */
+        line-height: 1px;
+    }
+
+    /* ======================== header part================ */
+    .main-header h1 {
+        font-size: 1rem;
+    }
+
+    .main-header button {
+        font-size: 0.7rem;
+    }
+
+    .main-header img {
+        width: 90%;
+    }
+
+    /* ========== header-text============ */
+    .header-text {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+
+    /* ============== ICON PART=============== */
+    .icon-part-container {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .icon-part {
+        padding: 20px 0;
+    }
+
+    .list-icon-part {
+        padding-bottom: 30px;
+    }
+
+    .lip-logo {
+
+        width: 100%;
+    }
+
+    /* ============ HEADER TEXT PART ============= */
+    .header-news {
+        display: block;
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 50px 0;
+    }
+
+    .main-news-container {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .left-part {
+        text-align: center;
+        padding: 0 20px 20px;
+    }
+
+    .main-news {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .main-news-container {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .main-news-container div {
+        width: 80%;
+        margin: 0 auto;
+        padding-bottom: 15px;
+        margin-top: 40px;
+    }
+
+    .main-news-container img {
+        width: 100%;
+        text-align: left;
+    }
+
+    .main-news-container h4 {
+        text-align: justify;
+        padding-left: 10px;
+    }
+
+    .main-news-container p {
+        text-align: justify;
+        padding-left: 10px;
+    }
+
+    .link a {
+        padding-left: 10px;
+    }
+
+    /* ================ PART OF CONTACT ============== */
+    .contact {
+        max-width: 400px;
+        margin: 0 auto;
+
+    }
+
+    .contact-list {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .contact-list::after {
+
+        transform: translateX(-50%) scale(1);
+    }
+
+    .contact-list .list {
+        margin: 0 auto;
+        text-align: justify;
+        width: 80%;
+        padding: 0 0 40px 13px;
+
+    }
+
+
+    .contact-medias {
+        display: block;
+        width: 95%;
+        margin: 0 audio;
+    }
+
+    .medias-text {
+        display: block;
+        width: 90%;
+        padding: 0 0 20px 20px;
+        font-size: 0.8rem;
+    }
+
+    .medias-logos {
+        flex-wrap: wrap;
+        width: 95%;
+        margin: 0 auto;
+
+        justify-content: space-between;
+    }
+
+    .medias-logos img {
+        width: 40px;
+        padding: 0 0 10px;
+    }
+
+    /*=====================FOOTER=============*/
+    footer ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    footer h3 {
+        font-size: 1.4rem;
+    }
+
+    footer ul img {
+        width: 45px;
+        padding-bottom: 15px;
+
+    }
+}
